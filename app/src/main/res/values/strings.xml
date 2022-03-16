@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Project</string>
     <string name="title">Wow Quiz</string>
+    <string name="app_bar_menu">Menu</string>
+    <string name="app_bar_search">Search</string>
+    <string name="screen_title">FoodCal</string>
+    <string name="close_icon">Close</string>
+    <string name="search_here">Search here…</string>
+    <string name="search_icon">Search Icon</string>
 </resources>
