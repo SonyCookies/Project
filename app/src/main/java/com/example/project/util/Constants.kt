@@ -5,7 +5,7 @@ object Constants {
     const val DATABASE_NAME = "food_database"
 
     const val LIST_SCREEN = "list/{action}"
-    const val PROFILE_SCREEN = "list/{profileId}"
+    const val PROFILE_SCREEN = "profile/{profileId}"
 
     const val LIST_ARGUMENT_KEY = "action"
     const val PROFILE_ARGUMENT_KEY = "profileId"

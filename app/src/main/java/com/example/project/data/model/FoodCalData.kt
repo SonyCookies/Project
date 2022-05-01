@@ -10,5 +10,5 @@ data class FoodCalData(
     val id: Int = 0,
     val foodName: String,
     val calories: String,
-    val carbs: String
+    val carbs: String,
 )

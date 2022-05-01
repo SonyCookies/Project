@@ -15,7 +15,7 @@ class Screens(
         }
     }
 
-    val profile: (Int) -> Unit = {profileId ->
+    val profile: (Int) -> Unit = { profileId ->
         navController.navigate(route = "profile/$profileId")
     }
 }

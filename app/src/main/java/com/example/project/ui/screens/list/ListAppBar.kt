@@ -1,4 +1,4 @@
-package com.example.project.ui.screens
+package com.example.project.ui.screens.list
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -26,7 +26,6 @@ import com.example.project.ui.theme.topAppBarBackgroundColor
 import com.example.project.ui.theme.topAppBarContentColor
 import com.example.project.ui.viewmodel.SharedViewModel
 import com.example.project.util.SearchAppBarState
-import com.example.project.util.TrailingIconState
 
 @Composable
 fun ListAppBar(
@@ -77,12 +76,8 @@ fun DefaultListAppBar(
         Row(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
-        ){
+        ) {
             Menu()
-            Text(
-                text = stringResource(id = R.string.screen_title),
-                color = MaterialTheme.colors.topAppBarContentColor,
-            )
             SearchAction(onSearchClicked = onSearchClicked)
         }
     }
@@ -96,7 +91,6 @@ fun SearchAppBar(
     onCloseClicked: () -> Unit,
     onSearchClicked: (String) -> Unit
 ) {
-    var trailingIconState by remember { mutableStateOf(TrailingIconState.READY_TO_DELETE) }
 
     Surface(
         modifier = Modifier
@@ -115,19 +109,10 @@ fun SearchAppBar(
             trailingIcon = {
                 IconButton(
                     onClick = {
-                        when (trailingIconState) {
-                            TrailingIconState.READY_TO_DELETE -> {
-                                onTextChange("")
-                                trailingIconState = TrailingIconState.READY_TO_CLOSE
-                            }
-                            TrailingIconState.READY_TO_CLOSE -> {
-                                if (text.isNotEmpty()) {
-                                    onTextChange("")
-                                } else {
-                                    onCloseClicked()
-                                    trailingIconState = TrailingIconState.READY_TO_DELETE
-                                }
-                            }
+                        if (text.isNotEmpty()) {
+                            onTextChange("")
+                        } else {
+                            onCloseClicked()
                         }
                     },
                 ) {
@@ -144,7 +129,7 @@ fun SearchAppBar(
                     modifier = Modifier
                         .alpha(ContentAlpha.medium),
                     text = stringResource(R.string.search_here),
-                    color = Color.White
+                    color = MaterialTheme.colors.topAppBarContentColor
                 )
             },
             textStyle = TextStyle(
@@ -186,7 +171,6 @@ fun SearchAppBar(
         )
     }
 }
-
 
 
 @Composable

@@ -3,8 +3,17 @@
     <string name="title">Wow Quiz</string>
     <string name="app_bar_menu">Menu</string>
     <string name="app_bar_search">Search</string>
-    <string name="screen_title">FoodCal</string>
+    <string name="screen_title">FOODCAL</string>
     <string name="close_icon">Close</string>
     <string name="search_here">Search here…</string>
     <string name="search_icon">Search Icon</string>
+    <string name="add_food">Add Food</string>
+    <string name="add_foods">Add Food</string>
+    <string name="add_foods_again">Add Food</string>
+    <string name="add_button">Add Button</string>
+    <string name="sad_face_icon">Sad Face Icon</string>
+    <string name="no_food_found">No Food Found</string>
+    <string name="back_arrow">Back Arrow</string>
+    <string name="delete">Delete</string>
+    <string name="update">Update</string>
 </resources>
